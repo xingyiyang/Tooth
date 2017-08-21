@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.scu.xing.tooth.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:elevation="0dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/main_tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ToggleButton
+        android:id="@+id/tgb_tengtong"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textOn="@string/shouye_tengtong"
+        android:textOff="@string/shouye_tengtong"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        android:textAlignment="textStart"
+        android:textSize="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/spinner_tengtong1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:entries="@array/tengtong"
+            android:visibility="invisible"/>
+
+        <Spinner
+            android:id="@+id/spinner_tengtong2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/jifatong"
+            android:layout_weight="1"
+            android:visibility="invisible"/>
+
+    </LinearLayout>
+
+    <ToggleButton
+        android:id="@+id/tgb_jiancha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textOn="@string/shouye_jiancha"
+        android:textOff="@string/shouye_jiancha"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        android:textAlignment="textStart"
+        android:textSize="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/spinner_jiancha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/jiancha"
+            android:visibility="invisible"/>
+
+        <Spinner
+            android:id="@+id/spinner_jianchawaixing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/jianchawaixing"
+            android:visibility="invisible"/>
+
+        <Spinner
+            android:id="@+id/spinner_jianchaqita"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/jianchaqita"
+            android:visibility="invisible"/>
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@mipmap/background"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_chaxuan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:background="@drawable/background_color"
+            android:textColor="@color/colorwhite"
+            android:text="@string/shouye_chaxuan" />
+
+    </LinearLayout>
+
+</LinearLayout>

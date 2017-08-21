@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">Tooth</string>
+    <string name="shouye_jiancha">检查类型</string>
+    <string name="shouye_tengtong">疼痛类型</string>
+    <string name="shouye_chaxuan">查询</string>
+    <string name="shouye_chongzhi">重置</string>
+    <string name="fanhui">返回</string>
+    <string name="jifatongjia">激发痛+</string>
+
+    <string-array name="tengtong">
+        <item>选择疼痛类型</item>
+        <item>激发痛+</item>
+        <item>自发痛+</item>
+        <item>激发痛-</item>
+        <item>自发痛-</item>
+        <item>疼痛定位+</item>
+        <item>疼痛定位-</item>
+        <item>放散痛+</item>
+        <item>牵涉痛+</item>
+        <item>夜间痛+</item>
+    </string-array>
+
+    <string-array name="jifatong">
+        <item>咬合痛+</item>
+        <item>咀嚼痛+</item>
+        <item>冷刺激+</item>
+        <item>热刺激+</item>
+    </string-array>
+
+    <string-array name="jiancha">
+        <item>外形</item>
+        <item>其他</item>
+    </string-array>
+
+    <string-array name="jianchawaixing">
+        <item>牙体硬组织病损+</item>
+        <item>牙体硬组织病损-</item>
+        <item>牙冠变色+</item>
+        <item>食物嵌塞+</item>
+        <item>穿髓孔+</item>
+        <item>穿髓孔-</item>
+    </string-array>
+
+    <string-array name="jianchaqita">
+        <item>叩痛+</item>
+        <item>叩痛-</item>
+        <item>牙松动+</item>
+        <item>牙移位+</item>
+        <item>牙髓电活力测验+</item>
+        <item>牙髓电活力测验-</item>
+        <item>牙周袋+</item>
+        <item>牙齿敏感+</item>
+        <item>淋巴结肿大+</item>
+    </string-array>
+
+    <drawable name="clr_normal">#303F9F</drawable>
+    <drawable name="clr_pressed">#007fff</drawable>
+</resources>
