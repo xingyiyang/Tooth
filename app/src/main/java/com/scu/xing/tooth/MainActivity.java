@@ -9,16 +9,20 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     private Spinner sp_tengtong1;  //疼痛第一级
     private Spinner sp_tengtong2;  //疼痛第二级
+    private EditText editText_tengtong;  //疼痛的关键字
     private Spinner sp_jiancha;          //检查第一级
     private Spinner sp_jianchawaixing;   //检查第二级 外形
     private Spinner sp_jianchaqita;      //检查第二级 其他
+    private EditText editText_jiancha;   //检查的关键字
     Bundle bundle = new Bundle();        //把选中的参数传到第二页面
 
     @Override
@@ -69,6 +73,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //疼痛的关键字
+        editText_tengtong = (EditText)findViewById(R.id.edt_tengtong);
 
         //初始化检查第一级列表，监听列表
         sp_jiancha = (Spinner)findViewById(R.id.spinner_jiancha);
@@ -87,7 +93,6 @@ public class MainActivity extends AppCompatActivity {
                 }
                 String str_jiancha = (String)sp_jiancha.getSelectedItem();
                 bundle.putString("jiancha",str_jiancha);
-                Log.d("spinner", str_jiancha);
             }
 
             @Override
@@ -103,7 +108,6 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 String str_waixing = (String)sp_jianchawaixing.getSelectedItem();
                 bundle.putString("waixing",str_waixing);
-                Log.d("spinner", str_waixing);
             }
 
             @Override
@@ -119,7 +123,6 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 String str_qita = (String)sp_jianchaqita.getSelectedItem();
                 bundle.putString("qita",str_qita);
-                Log.d("spinner", str_qita);
             }
 
             @Override
@@ -128,12 +131,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //
+        //检查的关键字
+        editText_jiancha = (EditText)findViewById(R.id.edt_jiancha);
+
+        //查询的监听
         findViewById(R.id.button_chaxuan).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(sp_tengtong1.getSelectedItemPosition()!=0){
 
+                    getKeyword();
                     Toast.makeText(MainActivity.this,"查询",Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(MainActivity.this,ListActivity.class);
                     intent.putExtras(bundle);
@@ -167,7 +174,20 @@ public class MainActivity extends AppCompatActivity {
     public void closeAllSpinner(){
 
         sp_tengtong1.setSelection(0);
+        sp_tengtong2.setSelection(0);
         sp_jiancha.setSelection(0);
+        sp_jianchawaixing.setSelection(0);
+        sp_jianchaqita.setSelection(0);
+    }
+
+    //获取输入的关键字
+    public void getKeyword(){
+        if(editText_tengtong.getText()!=null){
+            bundle.putString("tengtongkeyword",editText_tengtong.getText().toString());
+        }
+        if(editText_jiancha.getText()!=null){
+            bundle.putString("jianchakeyword",editText_jiancha.getText().toString());
+        }
     }
 
     /**

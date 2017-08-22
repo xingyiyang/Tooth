@@ -67,6 +67,8 @@ public class ListActivity extends AppCompatActivity{
         String jiancha = bundle.getString("jiancha");
         String waixing = bundle.getString("waixing");
         String qita = bundle.getString("qita");
+        String tengtongkeyword = bundle.getString("tengtongkeyword");
+        String jianchakeyword = bundle.getString("jianchakeyword");
 
         textView_tengtong = (TextView)findViewById(R.id.textView_tengtong);
         textView_jiancha = (TextView)findViewById(R.id.textView_jiancha);
@@ -78,6 +80,9 @@ public class ListActivity extends AppCompatActivity{
         if(tengtong1.equals("激发痛+") && tengtong2!=null){
             textView_tengtong.setText(textView_tengtong.getText()+" / "+tengtong2);
         }
+        if(tengtongkeyword!=null){
+            textView_tengtong.setText(textView_tengtong.getText()+" / "+tengtongkeyword);
+        }
 
         textView_jiancha.setText("检查类型：");
         if(jiancha.equals("外形")){
@@ -85,6 +90,9 @@ public class ListActivity extends AppCompatActivity{
         }
         if(jiancha.equals("其他")){
             textView_jiancha.setText(textView_jiancha.getText()+jiancha+" / "+qita);
+        }
+        if(jianchakeyword!=null){
+            textView_jiancha.setText(textView_jiancha.getText()+" / "+jianchakeyword);
         }
 
     }

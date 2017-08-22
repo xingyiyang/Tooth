@@ -23,15 +23,16 @@
     </android.support.design.widget.AppBarLayout>
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/shouye_tengtong"
-        android:textSize="16sp"
-        android:paddingTop="6dp"
         android:paddingBottom="6dp"
-        android:paddingStart="4dp"
         android:paddingEnd="4dp"
-        android:textColor="@color/colorPrimary"/>
+        android:paddingStart="4dp"
+        android:paddingTop="6dp"
+        android:text="@string/shouye_tengtong"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp" />
 
     <View
         android:layout_width="match_parent"
@@ -42,7 +43,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="6dp">
+        >
 
         <Spinner
             android:id="@+id/spinner_tengtong1"
@@ -58,7 +59,23 @@
             android:entries="@array/jifatong"
             android:layout_weight="1"/>
 
+
+
     </LinearLayout>
+
+    <EditText
+        android:id="@+id/edt_tengtong"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="@string/edit_tengtong"
+        android:background="@null"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp"
+        android:textSize="17sp"
+        android:textCursorDrawable="@drawable/color_cursor"/>
 
     <View
         android:layout_width="match_parent"
@@ -110,6 +127,20 @@
 
     </LinearLayout>
 
+    <EditText
+        android:id="@+id/edt_jiancha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="@string/edit_jiancha"
+        android:background="@null"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp"
+        android:textSize="17sp"
+        android:textCursorDrawable="@drawable/color_cursor"/>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
@@ -124,12 +155,13 @@
         android:text="@string/shouye_chaxuan"
         android:layout_gravity="end"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="10dp" />
+        android:layout_marginEnd="6dp" />
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@mipmap/backgoun"/>
+        android:background="@mipmap/backgoun"
+        android:contentDescription="@string/app_name"/>
 
 </LinearLayout>

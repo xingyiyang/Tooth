@@ -6,6 +6,8 @@
     <string name="shouye_chongzhi">重置</string>
     <string name="fanhui">返回</string>
     <string name="jifatongjia">激发痛+</string>
+    <string name="edit_tengtong">其他疼痛类型</string>
+    <string name="edit_jiancha">其他检查类型</string>
 
     <string-array name="tengtong">
         <item>选择疼痛类型</item>
