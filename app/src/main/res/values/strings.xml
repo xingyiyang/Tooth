@@ -30,6 +30,7 @@
     </string-array>
 
     <string-array name="jiancha">
+        <item>选择检查类型</item>
         <item>外形</item>
         <item>其他</item>
     </string-array>

@@ -44,7 +44,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:entries="@array/tengtong"
-            android:visibility="invisible"/>
+            android:visibility="gone"/>
 
         <Spinner
             android:id="@+id/spinner_tengtong2"
@@ -52,7 +52,7 @@
             android:layout_height="wrap_content"
             android:entries="@array/jifatong"
             android:layout_weight="1"
-            android:visibility="invisible"/>
+            android:visibility="gone"/>
 
     </LinearLayout>
 

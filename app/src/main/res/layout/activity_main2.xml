@@ -57,6 +57,13 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:entries="@array/jifatong"
+            android:layout_weight="1"
+            android:visibility="gone"/>
+
+        <Spinner
+            android:id="@+id/spinner_tt_blank"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
             android:layout_weight="1"/>
 
 
@@ -115,7 +122,8 @@
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_weight="1"
-            android:entries="@array/jianchawaixing"/>
+            android:entries="@array/jianchawaixing"
+            android:visibility="gone"/>
 
         <Spinner
             android:id="@+id/spinner_jianchaqita"
@@ -124,6 +132,13 @@
             android:layout_weight="1"
             android:entries="@array/jianchaqita"
             android:visibility="gone"/>
+
+        <Spinner
+            android:id="@+id/spinner_jc_blank"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            />
 
     </LinearLayout>
 
@@ -157,11 +172,14 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="6dp" />
 
-    <ImageView
+    <EditText
+        android:id="@+id/editText"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@mipmap/backgoun"
-        android:contentDescription="@string/app_name"/>
+        android:inputType="textMultiLine"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:layout_marginTop="6dp"
+        android:background="@null"/>
 
 </LinearLayout>
