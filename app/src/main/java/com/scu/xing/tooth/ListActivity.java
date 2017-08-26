@@ -1,5 +1,7 @@
 package com.scu.xing.tooth;
 
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.ActionBar;
@@ -13,6 +15,8 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.scu.xing.tooth.dbhelper.DBHelper;
 
 /**
  * Created by xing on 2017/8/14.
@@ -44,6 +48,24 @@ public class ListActivity extends AppCompatActivity{
         //获取第一个页面参数的值，把参数的值展示出来
         initTextView();
 
+        //使用自定义的DBHelper对数据操作
+        DBHelper helper = new DBHelper(ListActivity.this);
+        SQLiteDatabase db = helper.getWritableDatabase();
+
+        //查询数据库中的数据
+        Cursor c = db.rawQuery("select * from tooth_table",null);
+        //遍历数据库中的数据
+        if(c!=null){
+            String[] clos = c.getColumnNames();
+            while (c.moveToNext()){
+                for(String columname:clos){
+                    Log.i("info",columname+" : "+c.getString(c.getColumnIndex(columname)));
+                }
+            }
+            c.close();
+        }
+        db.close();
+
         //设置listview的数据
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(ListActivity.this,android.R.layout.simple_list_item_1,data);
         listView = (ListView)findViewById(R.id.list_view);
@@ -59,7 +81,9 @@ public class ListActivity extends AppCompatActivity{
         });
     }
 
-    //获取上一个页面查询的参数
+    /**
+     * 获取上一个页面查询的参数
+     */
     private void initTextView(){
         Bundle bundle = getIntent().getExtras();
         String tengtong1 = bundle.getString("tengtongfirst");
