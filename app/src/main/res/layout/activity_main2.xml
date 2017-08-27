@@ -66,23 +66,36 @@
             android:layout_height="48dp"
             android:layout_weight="1"/>
 
-
-
     </LinearLayout>
 
-    <EditText
-        android:id="@+id/edt_tengtong"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:hint="@string/edit_tengtong"
-        android:background="@null"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp"
-        android:paddingStart="6dp"
-        android:paddingEnd="6dp"
-        android:textSize="17sp"
-        android:textCursorDrawable="@drawable/color_cursor"/>
+        android:orientation="horizontal"
+        >
+
+        <Spinner
+            android:id="@+id/spinner_tengtong11"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:entries="@array/tengtong"/>
+
+        <Spinner
+            android:id="@+id/spinner_tengtong12"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:entries="@array/jifatong"
+            android:layout_weight="1"
+            android:visibility="gone"/>
+
+        <Spinner
+            android:id="@+id/spinner_tt_blank2"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
 
     <View
         android:layout_width="match_parent"
@@ -142,19 +155,42 @@
 
     </LinearLayout>
 
-    <EditText
-        android:id="@+id/edt_jiancha"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:hint="@string/edit_jiancha"
-        android:background="@null"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp"
-        android:paddingStart="6dp"
-        android:paddingEnd="6dp"
-        android:textSize="17sp"
-        android:textCursorDrawable="@drawable/color_cursor"/>
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/spinner_jiancha2"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:entries="@array/jiancha"/>
+
+        <Spinner
+            android:id="@+id/spinner_jianchawaixing2"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:entries="@array/jianchawaixing"
+            android:visibility="gone"/>
+
+        <Spinner
+            android:id="@+id/spinner_jianchaqita2"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:entries="@array/jianchaqita"
+            android:visibility="gone"/>
+
+        <Spinner
+            android:id="@+id/spinner_jc_blank2"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
 
     <View
         android:layout_width="match_parent"
@@ -180,6 +216,8 @@
         android:inputType="textMultiLine"
         android:textCursorDrawable="@drawable/color_cursor"
         android:layout_marginTop="6dp"
-        android:background="@null"/>
+        android:background="@null"
+        android:hint="@string/shuoming"
+        android:gravity="center"/>
 
 </LinearLayout>
