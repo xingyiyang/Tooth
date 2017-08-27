@@ -48,22 +48,23 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="1dp"
+        android:layout_height="20dp"
         android:background="#d7d7d7"/>
 
     <ListView
         android:id="@+id/list_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/colorweakblue"/>
+        android:layout_height="match_parent" />
 
     <ImageView
         android:id="@+id/imagenoresult"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         app:srcCompat="@mipmap/noresult"
+        android:layout_weight="1"
+        android:layout_gravity="center_horizontal"
         android:visibility="gone"
-        android:layout_gravity="center_vertical"/>
+        />
 
 
 </LinearLayout>
