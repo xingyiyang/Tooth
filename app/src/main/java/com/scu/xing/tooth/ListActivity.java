@@ -234,7 +234,7 @@ public class ListActivity extends AppCompatActivity{
 
         Builder builder = new Builder(this);
         builder.setTitle(title);
-        builder.setIcon(R.mipmap.tooth);
+        builder.setIcon(R.mipmap.pandatooth);
         builder.setMessage(diagnosis);
         builder.setPositiveButton("确定", null);
         AlertDialog dialog = builder.create();

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Tooth</string>
+    <string name="app_name">胖达医生</string>
     <string name="shouye_jiancha">检查类型</string>
     <string name="shouye_tengtong">疼痛类型</string>
     <string name="shouye_chaxuan">查询</string>
@@ -8,7 +8,9 @@
     <string name="jifatongjia">激发痛+</string>
     <string name="edit_tengtong">其他疼痛类型</string>
     <string name="edit_jiancha">其他检查类型</string>
-    <string name="shuoming">说明书展示</string>
+    <string name="shuoming1">可以选择一个“疼痛类型”或者“检查类型”填入</string>
+    <string name="shuoming2">填入多个选项可使诊断更加准确</string>
+    <string name="bangzhu">帮助</string>
 
     <string-array name="tengtong">
         <item>选择疼痛类型</item>
